@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LISTA UL-LI Y QUE MUESTRE EN CONSOLA CADA ELEMENTO AL PULSAR BOTON</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+Crear una Lista (UL-LI) y que muestre en Consola Cada Elemento Al Pulsar Boton
+<br>
+
+<ul id="mercado">
+        <li id="uno">uno</li>
+        <li id="dos">cuatro</li>
+        <li id="tres">tres</li>
+        <li id="cinco">cinco</li>
+        <li id="sies">seis</li>
+    </ul>
+    <button id="boton">lista</button>
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script>
+	$(function(){
+                var btn = $("#boton");
+                var i = 1;          
+                btn.click(function(){
+                    texto = $('ul li:nth-child('+i+')').text();
+                    console.log(texto);
+                    i = i +1;
+                });
+        });
+</script>		
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
